@@ -4,6 +4,7 @@ body {
     background-color: rgba(235,233,235,255);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #svgContainer {
@@ -13,7 +14,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
 }
 
 #cardPin {
@@ -46,6 +46,6 @@ body {
     transform-origin: top right;
     paint-order: stroke;
     animation-duration: 10s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-name: rotation;
 }

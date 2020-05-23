@@ -32,19 +32,23 @@
         </svg>`;
 
         for (let i = 0; i < 18; i++) {
-            let fanContainerEl = document.querySelector('.fan');
-            fanContainerEl ?
-                fanContainerEl.insertAdjacentHTML('beforebegin', fanEl)
-                :
-                document.querySelector('#svgContainer').insertAdjacentHTML('beforeend', fanEl)
+            document.querySelector('#svgContainer').insertAdjacentHTML('beforebegin', fanEl)
         }
 
         setTimeout(() => {
-            const fanElements = document.querySelectorAll('.fan');
+            const fanElements = Array.from(document.querySelectorAll('.fan')).reverse();
             let delay = 0;
+            let red = 255;
+            let green = 173;
+            let blue = 5;
+
             fanElements.forEach(fan => {
+                fan.style.fill = `rgb(${red},${green},${blue})`;
                 fan.style.animationDelay = `${delay}s`;
                 delay += 0.25;
+                red += 10;
+                green += 10;
+                blue += 10;
             });
         }, 0)
 
