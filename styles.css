@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgba(235,233,235,255);
+    display: flex;
+    flex-direction: column;
 }
 
 #svgContainer {
@@ -11,11 +13,12 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 #cardPin {
-    width: 10rem;
-    height: 10rem;
+    width: 15vh;
+    height: 15vh;
     z-index: 2;
     fill: black;
     stroke: white;
@@ -34,15 +37,15 @@ body {
 
 .fan {
     position: absolute;
-    width: 25rem;
-    height: 25rem;
+    width: 40vh;
+    height: 40vh;
     stroke: white;
     stroke-width: 2.5; 
     top: 50%;
     right: 50%;
     transform-origin: top right;
     paint-order: stroke;
-    animation-duration: 7.5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-name: rotation;
 }
