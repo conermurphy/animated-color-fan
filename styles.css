@@ -22,6 +22,16 @@ body {
     stroke-width: 2.5;
 }
 
+@keyframes rotation {
+    from {
+        transform: rotateZ(0deg); 
+    }
+
+    to {
+        transform: rotateZ(360deg); 
+    }
+}
+
 .fan {
     position: absolute;
     width: 25rem;
@@ -32,6 +42,7 @@ body {
     right: 50%;
     transform-origin: top right;
     paint-order: stroke;
-    transition-timing-function: 'ease-in-out';
-    transition: 3s all;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite;
+    animation-name: rotation;
 }

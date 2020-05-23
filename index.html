@@ -37,26 +37,16 @@
                 fanContainerEl.insertAdjacentHTML('beforebegin', fanEl)
                 :
                 document.querySelector('#svgContainer').insertAdjacentHTML('beforeend', fanEl)
-            document.querySelector('.fan').style.transform = 'rotate(0deg)';
         }
 
         setTimeout(() => {
             const fanElements = document.querySelectorAll('.fan');
-            let rotate = 340;
+            let delay = 0;
             fanElements.forEach(fan => {
-                fan.style.transform = `rotate(${rotate}deg)`;
-                rotate -= 20;
+                fan.style.animationDelay = `${delay}s`;
+                delay += 0.2;
             });
         }, 0)
-
-        setTimeout(() => {
-            const fanElements = document.querySelectorAll('.fan');
-            let rotate = 360;
-            fanElements.forEach(fan => {
-                fan.style.transform = `rotate(${rotate}deg)`;
-            });
-        }, 5000)
-
 
     </script>
 </body>
