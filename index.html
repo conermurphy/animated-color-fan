@@ -32,14 +32,31 @@
         </svg>`;
 
         for (let i = 0; i < 18; i++) {
-            let fanContainerEl = document.querySelector('.fan'); console.log(fanContainerEl);
-            fanContainerEl ? fanContainerEl.insertAdjacentHTML('beforebegin', fanEl) :
+            let fanContainerEl = document.querySelector('.fan');
+            fanContainerEl ?
+                fanContainerEl.insertAdjacentHTML('beforebegin', fanEl)
+                :
                 document.querySelector('#svgContainer').insertAdjacentHTML('beforeend', fanEl)
-        } const
-            fanElements = document.querySelectorAll('.fan'); let rotate = 340; fanElements.forEach(fan => {
+            document.querySelector('.fan').style.transform = 'rotate(0deg)';
+        }
+
+        setTimeout(() => {
+            const fanElements = document.querySelectorAll('.fan');
+            let rotate = 340;
+            fanElements.forEach(fan => {
                 fan.style.transform = `rotate(${rotate}deg)`;
                 rotate -= 20;
             });
+        }, 0)
+
+        setTimeout(() => {
+            const fanElements = document.querySelectorAll('.fan');
+            let rotate = 360;
+            fanElements.forEach(fan => {
+                fan.style.transform = `rotate(${rotate}deg)`;
+            });
+        }, 5000)
+
 
     </script>
 </body>

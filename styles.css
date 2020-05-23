@@ -32,4 +32,6 @@ body {
     right: 50%;
     transform-origin: top right;
     paint-order: stroke;
+    transition-timing-function: 'ease-in-out';
+    transition: 3s all;
 }
