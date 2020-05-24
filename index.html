@@ -46,7 +46,6 @@
             document.querySelector('#svgContainer').insertAdjacentHTML('afterbegin', fanEl)
         }
 
-
         const colourChanger = ([red = 253, green = 52, blue = 43]) => {
             const fanElements = Array.from(document.querySelectorAll('.fan')).reverse();
             let delay = 0;
@@ -65,18 +64,18 @@
             let input = e.target;
             switch (input.id) {
                 case "red":
-                    red = input.value
+                    red = parseInt(input.value)
                     break;
                 case "blue":
-                    blue = input.value
+                    blue = parseInt(input.value)
                     break;
                 case "green":
-                    green = input.value
+                    green = parseInt(input.value)
                     break;
                 default:
                     break;
             }
-            console.log(red, blue, green);
+            colourChanger([red, blue, green]);
         }
 
         document.querySelectorAll('.colourInput').forEach(el => (
