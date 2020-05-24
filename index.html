@@ -42,9 +42,14 @@
                     " />
         </svg>`;
 
-        let red = 253;
-        let green = 52;
-        let blue = 43;
+        let red = ranNum();
+        let green = ranNum();
+        let blue = ranNum();
+
+        function ranNum() {
+            const num = Math.floor(Math.random() * 255);
+            return num;
+        }
 
         for (let i = 0; i < 18; i++) {
             document.querySelector('#svgContainer').insertAdjacentHTML('afterbegin', fanEl)
