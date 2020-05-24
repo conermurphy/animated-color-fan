@@ -23,7 +23,7 @@ body {
     filter: drop-shadow(0px 0px 5px #201E1F);
     fill: #201E1F;
     stroke: white;
-    stroke-width: 5;
+    stroke-width: 2.5;
 }
 
 @keyframes rotation {
