@@ -63,9 +63,9 @@
                 fan.style.fill = `rgb(${red},${green},${blue})`;
                 fan.style.animationDelay = `${delay}s`;
                 delay += 0.25;
-                red += 10;
-                green += 10;
-                blue += 10;
+                red >= 255 ? red = 255 : red += 10;
+                green >= 255 ? green = 255 : green += 10;
+                blue >= 255 ? blue = 255 : blue += 10;
             });
         }
 
