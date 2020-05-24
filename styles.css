@@ -44,7 +44,7 @@ p {
     right: 50vw;
     transform-origin: top right;
     paint-order: stroke;
-    animation-duration: 10s;
+    animation-duration: 7.5s;
     animation-iteration-count: infinite;
     animation-name: rotation;
     transition: 2s all;
