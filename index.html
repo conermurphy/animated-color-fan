@@ -13,18 +13,9 @@
 
     </div>
     <form id="formContainer">
-        <div>
-            <p>Red</p>
-            <input type="text" id="red" name="red" class="colourInput" />
-        </div>
-        <div>
-            <p>Green</p>
-            <input type="text" id="green" name="green" class="colourInput" />
-        </div>
-        <div>
-            <p>Blue</p>
-            <input type="text" id="blue" name="blue" class="colourInput" />
-        </div>
+        <input type="text" id="red" name="red" class="colourInput" placeholder="red" />
+        <input type="text" id="green" name="green" class="colourInput" placeholder="green" />
+        <input type="text" id="blue" name="blue" class="colourInput" placeholder="blue" />
     </form>
     <footer>
         <p>Built with ❤️ by <a href="https://conermurphy.com">Coner Murphy.</a></p>
@@ -77,12 +68,15 @@
             switch (input.id) {
                 case "red":
                     red = parseInt(input.value)
+                    document.querySelector(`#${input.id}`).style.backgroundColor = `rgb(${input.value},0,0)`;
                     break;
                 case "green":
                     green = parseInt(input.value)
+                    document.querySelector(`#${input.id}`).style.backgroundColor = `rgb(0,${input.value},0)`;
                     break;
                 case "blue":
                     blue = parseInt(input.value)
+                    document.querySelector(`#${input.id}`).style.backgroundColor = `rgb(0,0,${input.value})`;
                     break;
                 default:
                     break;
