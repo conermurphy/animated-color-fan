@@ -46,12 +46,10 @@
             document.querySelector('#svgContainer').insertAdjacentHTML('afterbegin', fanEl)
         }
 
-        setTimeout(() => {
+
+        const colourChanger = ([red = 253, green = 52, blue = 43]) => {
             const fanElements = Array.from(document.querySelectorAll('.fan')).reverse();
             let delay = 0;
-            let red = 255;
-            let green = 173;
-            let blue = 5;
 
             fanElements.forEach(fan => {
                 fan.style.fill = `rgb(${red},${green},${blue})`;
@@ -61,7 +59,7 @@
                 green += 10;
                 blue += 10;
             });
-        }, 0)
+        }
 
         const handleValueChange = (e) => {
             let input = e.target;
@@ -85,6 +83,7 @@
             el.addEventListener('input', handleValueChange)
         ));
 
+        colourChanger([]);
 
 
     </script>
