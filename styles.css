@@ -47,6 +47,7 @@ p {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-name: rotation;
+    transition: 2s all;
 }
 
 #formContainer {

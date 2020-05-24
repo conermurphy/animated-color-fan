@@ -18,12 +18,12 @@
             <input type="text" id="red" name="red" class="colourInput" />
         </div>
         <div>
-            <p>Blue</p>
-            <input type="text" id="blue" name="blue" class="colourInput" />
-        </div>
-        <div>
             <p>Green</p>
             <input type="text" id="green" name="green" class="colourInput" />
+        </div>
+        <div>
+            <p>Blue</p>
+            <input type="text" id="blue" name="blue" class="colourInput" />
         </div>
     </div>
     <script>
@@ -66,16 +66,16 @@
                 case "red":
                     red = parseInt(input.value)
                     break;
-                case "blue":
-                    blue = parseInt(input.value)
-                    break;
                 case "green":
                     green = parseInt(input.value)
+                    break;
+                case "blue":
+                    blue = parseInt(input.value)
                     break;
                 default:
                     break;
             }
-            colourChanger([red, blue, green]);
+            colourChanger([red, green, blue]);
         }
 
         document.querySelectorAll('.colourInput').forEach(el => (
