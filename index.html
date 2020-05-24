@@ -17,15 +17,15 @@
     <div id="formContainer">
         <div>
             <p>Red</p>
-            <input type="text" id="red" name="red" />
+            <input type="text" id="red" name="red" class="colourInput" />
         </div>
         <div>
             <p>Blue</p>
-            <input type="text" id="blue" name="blue" />
+            <input type="text" id="blue" name="blue" class="colourInput" />
         </div>
         <div>
             <p>Green</p>
-            <input type="text" id="green" name="green" />
+            <input type="text" id="green" name="green" class="colourInput" />
         </div>
     </div>
     <script>
@@ -64,6 +64,30 @@
                 blue += 10;
             });
         }, 0)
+
+        const handleValueChange = (e) => {
+            let input = e.target;
+            switch (input.id) {
+                case "red":
+                    red = input.value
+                    break;
+                case "blue":
+                    blue = input.value
+                    break;
+                case "green":
+                    green = input.value
+                    break;
+                default:
+                    console.log(input.value)
+            }
+            console.log(red, blue, green);
+        }
+
+        document.querySelectorAll('.colourInput').forEach(el => (
+            el.addEventListener('input', handleValueChange)
+        ));
+
+
 
     </script>
 </body>
