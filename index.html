@@ -42,15 +42,20 @@
                     " />
         </svg>`;
 
+        let red = 253;
+        let green = 52;
+        let blue = 43;
+
         for (let i = 0; i < 18; i++) {
             document.querySelector('#svgContainer').insertAdjacentHTML('afterbegin', fanEl)
         }
 
-        const colourChanger = ([red = 253, green = 52, blue = 43]) => {
+        const colourChanger = ([red, green, blue]) => {
             const fanElements = Array.from(document.querySelectorAll('.fan')).reverse();
             let delay = 0;
 
             fanElements.forEach(fan => {
+                console.log(red, green, blue)
                 fan.style.fill = `rgb(${red},${green},${blue})`;
                 fan.style.animationDelay = `${delay}s`;
                 delay += 0.25;
@@ -75,14 +80,14 @@
                 default:
                     break;
             }
-            colourChanger([red, green, blue]);
+            colourChanger([red, green, blue])
         }
 
         document.querySelectorAll('.colourInput').forEach(el => (
             el.addEventListener('input', handleValueChange)
         ));
 
-        colourChanger([]);
+        colourChanger([red, green, blue]);
 
 
     </script>
